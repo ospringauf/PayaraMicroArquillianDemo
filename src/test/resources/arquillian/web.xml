@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+<!-- 	
+  USE IN-MEMORY H2 DB FOR ARQUILLIAN TESTS
+-->
+   
+  <data-source>
+    <name>java:global/feedy/questionsource</name>
+    <class-name>org.h2.Driver</class-name>
+    <url>jdbc:h2:mem:db;DB_CLOSE_DELAY=-1</url>
+    <user>sa</user>
+    <password>sa</password>
+  </data-source>
+</web-app>
